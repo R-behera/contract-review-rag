@@ -1,0 +1,46 @@
+{
+  "slug": "contract-review-rag",
+  "title": "Contract Review RAG",
+  "project_type": "rag",
+  "domain": "LegalTech",
+  "summary": "Search clauses, compare obligations, and answer grounded contract questions for review teams.",
+  "tags": [
+    "legal",
+    "contracts",
+    "rag"
+  ],
+  "accent": "#ff6b35",
+  "dashboard_metrics": [
+    {
+      "label": "Grounded Recall",
+      "value": "82%",
+      "delta": "+4.6%"
+    },
+    {
+      "label": "Citation Coverage",
+      "value": "83%",
+      "delta": "+3.1%"
+    },
+    {
+      "label": "Latency",
+      "value": "144ms",
+      "delta": "-18ms"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "ops"
+  },
+  "sample_metrics": {
+    "acquisition": 31.8,
+    "activation": 34.0,
+    "retention": 47.6,
+    "revenue": 73.6
+  },
+  "knowledge_base": [
+    "Contract Review RAG is positioned as a LegalTech starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Search clauses, compare obligations, and answer grounded contract questions for review teams.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on legal, contracts, rag."
+  ]
+}
