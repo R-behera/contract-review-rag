@@ -9,7 +9,8 @@
     "contracts",
     "rag"
   ],
-  "accent": "#ff6b35",
+  "accent": "#b1c82c",
+  "secondary_accent": "#a99c2c",
   "dashboard_metrics": [
     {
       "label": "Grounded Recall",
@@ -42,5 +43,52 @@
     "The primary value proposition is: Search clauses, compare obligations, and answer grounded contract questions for review teams.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on legal, contracts, rag."
+  ],
+  "app_archetype": "navigator",
+  "ui_profile": {
+    "layout": "board",
+    "surface": "aurora",
+    "font_stack": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "radius": 29,
+    "shadow": 59,
+    "eyebrow_style": "solid",
+    "module_columns": 2,
+    "hero_align": "left",
+    "headline_mode": "tall"
+  },
+  "app_modules": [
+    {
+      "label": "Query 01",
+      "title": "Grounded Question",
+      "description": "Ask a domain question and retrieve the most relevant context from the local knowledge base.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Search Context",
+      "prefill": "What is the top priority recommendation for Contract Review RAG?",
+      "hint": "Grounded answer and supporting contexts will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Query 02",
+      "title": "Retrieval Quality Review",
+      "description": "Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Review Quality",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 31.8,\n    \"activation\": 34.0,\n    \"retention\": 47.6,\n    \"revenue\": 73.6\n  },\n  \"baseline\": {\n    \"acquisition\": 29.26,\n    \"activation\": 31.28,\n    \"retention\": 43.79,\n    \"revenue\": 67.71\n  }\n}",
+      "hint": "Quality delta summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Query 03",
+      "title": "Response Playbook",
+      "description": "Generate a recommended follow-up workflow grounded in the project context.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Build Response",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Contract Review RAG.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"ops\"\n  },\n  \"metrics\": {\n    \"acquisition\": 31.8,\n    \"activation\": 34.0,\n    \"retention\": 47.6,\n    \"revenue\": 73.6\n  }\n}",
+      "hint": "Recommended workflow steps will appear here.",
+      "span": "normal"
+    }
   ]
 }
